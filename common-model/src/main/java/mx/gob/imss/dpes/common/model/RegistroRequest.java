@@ -1,0 +1,105 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mx.gob.imss.dpes.common.model;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import java.util.Date;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import mx.gob.imss.dpes.interfaces.relacionlaboral.model.RelacionLaboralOut;
+import mx.gob.imss.dpes.support.config.CustomDateDeserializer;
+import mx.gob.imss.dpes.support.config.CustomDateSerializer;
+import mx.gob.imss.dpes.interfaces.renapo.model.RenapoCurpRequest;
+import mx.gob.imss.dpes.interfaces.serviciosdigitales.model.bdtu.BDTURequest;
+
+/**
+ *
+ * @author eduardo.montesh
+ */
+@Data
+public class RegistroRequest extends BaseModel {
+
+    @Getter
+    @Setter
+    private String curp;
+    @Getter
+    @Setter
+    private String nss;
+    @Getter
+    @Setter
+    private Long numTelefono;
+    @Getter
+    @Setter
+    private String correo;
+    @Getter
+    @Setter
+    private String correoConfirmar;
+    @JsonDeserialize(using = CustomDateDeserializer.class)
+    @JsonSerialize(using = CustomDateSerializer.class)
+    @Getter
+    @Setter
+    private Date vigenciaToken;
+    @Getter
+    @Setter
+    private String token;
+    @Getter
+    @Setter
+    private RenapoCurpRequest renapoRequest;
+    @Getter
+    @Setter
+    private BDTURequest bdtuRequest;
+    @Getter
+    @Setter
+    private Long cvePerfil;
+    @Setter
+    private Long cveEntidadFinanciera;
+    @Getter
+    @Setter
+    private String matriculaTrabajadorImss;
+    @Getter
+    @Setter
+    private String delegacionTrabajadorImss;
+    @Getter
+    @Setter
+    private String rfc;
+    @Getter
+    @Setter
+    private String registroPatronal;
+    @Getter
+    @Setter
+    private String numEmpleado;
+    @Getter
+    @Setter
+    private RelacionLaboralOut relacionLaboral;
+    @Getter
+    @Setter
+    private String nombres;
+    @Getter
+    @Setter
+    private String fechNac;
+    @Getter
+    @Setter
+    private String apellido1;
+    @Getter
+    @Setter
+    private String apellido2;
+    @Getter
+    @Setter
+    private String sexo;
+    @Getter
+    @Setter
+    private Long firmaCartaRecibo = 0L;
+
+    public RegistroRequest() {
+    }
+
+    public RegistroRequest(String correo) {
+        this.correo = correo;
+    }
+
+}

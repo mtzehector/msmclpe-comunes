@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Encabezado" pageWidth="524" pageHeight="87" whenNoDataType="AllSectionsNoDetail" columnWidth="524" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="4b9a82b5-90ab-437f-bf57-aaf2789edc35">
+	<property name="ireport.zoom" value="4.545454545454547"/>
+	<property name="ireport.x" value="696"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="TITULO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="IMAGE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NUM_HOJA" class="java.lang.Integer"/>
+	<title>
+		<band height="85" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="524" height="42" backcolor="#621132" uuid="57a5f425-9397-46e0-bc99-c092f7a2dfd5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#AFB1B1"/>
+				</graphicElement>
+			</rectangle>
+			<image scaleImage="RealSize" onErrorType="Blank">
+				<reportElement x="11" y="5" width="87" height="30" uuid="b9d59b93-5bc6-4f80-ad26-ef7b0a897f27"/>
+				<imageExpression><![CDATA[$P{IMAGE_DIR}+"logo_gobierno.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="42" width="524" height="43" forecolor="#231F20" backcolor="#E7E7E6" uuid="8ba93feb-20f9-4635-b731-30f508e4076a"/>
+				<box>
+					<pen lineWidth="0.5" lineColor="#A6A9A9"/>
+					<topPen lineWidth="0.5" lineColor="#A6A9A9"/>
+					<leftPen lineWidth="0.5" lineColor="#A6A9A9"/>
+					<bottomPen lineWidth="0.5" lineColor="#A6A9A9"/>
+					<rightPen lineWidth="0.5" lineColor="#A6A9A9"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="10" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Instituto Mexicano del Seguro Social]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

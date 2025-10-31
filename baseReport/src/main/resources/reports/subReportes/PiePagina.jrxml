@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PiePagina" pageWidth="524" pageHeight="59" whenNoDataType="AllSectionsNoDetail" columnWidth="524" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty" uuid="789a04ea-ebea-4178-a8f3-fb5d3b0ac572">
+	<property name="ireport.zoom" value="1.5421731577181266"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="IMAGE_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/images/"]]></defaultValueExpression>
+	</parameter>
+	<pageFooter>
+		<band height="59" splitType="Stretch">
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="-1" y="0" width="524" height="58" forecolor="#E7E7E6" backcolor="#E7E7E6" uuid="db6632ed-f0cf-4878-a4dc-6075196b09b6"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="398" y="0" width="126" height="11" isRemoveLineWhenBlank="true" forecolor="#231F20" uuid="02230316-9b49-4c0c-80b6-6ed4c59b0e6c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Contacto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="12" width="126" height="36" forecolor="#231F20" uuid="320a9805-6ca7-4e21-b63d-07da5fd67591"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Paseo de la Reforma 476, P.B.
+Col. Juárez, Delegación
+Cuauhtémoc C.P. 06600 Ciudad de México.
+Tel. 01 800 623 23 23
+http://atencion.contactoimss.com.mx
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="-1" width="524" height="1" forecolor="#47494A" backcolor="#47494A" uuid="b8226cd5-b3aa-471f-87f5-37d14a8030df"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#231F20"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="132" y="12" width="42" height="30" uuid="b618a3d6-86ff-445d-8e64-7fafb847a018"/>
+				<imageExpression><![CDATA[$P{IMAGE_DIR}+"pie_gob_mx_footer.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="17" y="12" width="104" height="31" uuid="a0a828b1-addd-4aa9-83fa-9d9a2c652a87"/>
+				<imageExpression><![CDATA[$P{IMAGE_DIR}+"Logo_Gobierno_Mexico.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
